@@ -3,14 +3,12 @@ The problem of creating checkpoints on VMs using .vhdx share disks, which are us
 By using a shared HDD between 2 x VMs, the MS SQL cluster configuration is simulated when the database is placed on a network location that is physically located on the storage.
 
 A prerequisite for these scripts to work is that the name for each VM is in the following format:
-VM_NAME - System_Name
-If the names of the VMs are not defined in the specified format, it is necessary to correct the part within the script that filters the list of virtual machines in such a way that it can include another
-the logic your virtual machines are subject to.
+VM_NAME-System_Name
+If the names of the VMs are not defined in the specified format, it is necessary to correct the part within the script that filters the list of virtual machines in such a way that it can include another the logic your virtual machines are subject to.
 
 Creating checkpoints on all VMs from the system
 --------------------------------------------------
-Since in my case all virtual machines are members of one or more Windows Active Directory systems, at the beginning of the script, shutdown of all virtual machines from the system is done because
-only in that case can it be 100% guaranteed that after the machine restore, the integrity of each VM within the Active Directory domain will be safely preserved.
+Since in my case all virtual machines are members of one or more Windows Active Directory systems, at the beginning of the script, shutdown of all virtual machines from the system is done because only in that case can it be 100% guaranteed that after the machine restore, the integrity of each VM within the Active Directory domain will be safely preserved.
 
 Then it goes through the entire list of VMs and dismounts any DVD files mounted on the VM.
 
