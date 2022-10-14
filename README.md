@@ -16,17 +16,17 @@ Then it goes through the entire list of VMs and dismounts any DVD files mounted 
 
 In order to enable the creation of a checkpoint on VMs with a shared .vhdx file, the following algorithm was applied:
 - goes through all VMs and detects if there are VMs with shared .vhdx files on the system
--determine the amount of free space required for backup shared .vhdx files
+- determine the amount of free space required for backup shared .vhdx files
 - remove shared .vhdx files from VMs if they exist
 - copy the shared .vhdx files to the backup location
--create a checkpoint on all VMs from the specified system
+- create a checkpoint on all VMs from the specified system
 - automatic addition of shared .vhdx disks is performed on VMs where previously shared .vhdx disks were created
--refresh all VMs from the system
+- refresh all VMs from the system
 
 Restore checkpoints on all VMs from the system
 ----------------------------------------------
 - it goes through the entire list of VMs from the system and creates a list of VMs with shred .vhdx files.
--restore previously created checkpoint on virtual machines.
+- restore previously created checkpoint on virtual machines.
 - then the previously copied shared .vhdx files are copied from the specified backup location to the original location of each VM.
 - automatic addition of shared .vhdx disks is performed on VMs where previously shared .vhdx disks were created
--refresh all VMs from the system
+- refresh all VMs from the system
