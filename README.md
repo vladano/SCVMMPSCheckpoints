@@ -1,6 +1,6 @@
 These are powershell scripts to create/restore and delete checkpoints on Hyper-V VMs that are administered using SCVMM 2019/2016 powershell commands.
 The problem of creating checkpoints on VMs using .vhdx share disks, which are used when creating MS SQL clusters with 2 nodes, is specially treated.
-By using a shared HHD between 2 x VMs, the MS SQL cluster configuration is simulated when the database is placed on a network location that is physically located on the storage.
+By using a shared HDD between 2 x VMs, the MS SQL cluster configuration is simulated when the database is placed on a network location that is physically located on the storage.
 
 A prerequisite for these scripts to work is that the name for each VM is in the following format:
 VM_NAME - System_Name
